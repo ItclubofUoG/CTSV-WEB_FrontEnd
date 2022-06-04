@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManageUser</title>
+    <link rel="stylesheet" href="./access/css/ManageUser.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>....</header>
+        <div class="user_container">
+            <h1 class="mn-title">Manage User</h1>
+            <hr class="orange-line">
+            <!-- search box -->
+            <div class="table-function">
+                <form action="" class="search">
+                    <div class="search-cover">
+                        <input type="text" class="search-box" placeholder="Search">
+                    </div>
+                    <input class="btn-search" type="button" value="Search">
+                </form>
+            </div>
+            <!-- End search box -->
+
+            <!--Start Table Manage User -->
+            <div class="main-table">
+                <table class="table-admin">
+                    <tr class="table-head">
+                        <th class="head-row">StudentID</th>
+                        <th class="head-row">Fullname</th>
+                        <th class="head-row">Email</th>
+                        <th class="head-row">Gender</th>
+                        <th class="head-row">DoB</th>
+                        <th class="head-row">Phone</th>
+                        <th class="head-row">CardNumber</th>
+                        <th class="head-row">Score</th>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row">
+                            <a class="choose-user">GCC19009</a>
+                        </td>
+                        <td class="body-row">Thach Ngoc Trung</td>
+                        <td class="body-row">trungtngcc19009@fpt.edu.vn</td>
+                        <td class="body-row">Male</td>
+                        <td class="body-row">02/02/2001</td>
+                        <td class="body-row">0865894853</td>
+                        <td class="body-row">234567890</td>
+                        <td class="body-row">10</td>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">trsasa9009@fpt.edu.vn</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- End table -->
+
+
+            <!-- Start Modal Update/Delete-->
+            <div class="modal-container">
+                <div class="modal-content">
+                    <div class="modal-head">
+                        <h2 class="modal-label">Update User</h2>
+                        <a class="modal-close">X</a>
+                    </div>
+                    <form action="" class="modal-body">
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Student ID">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Fullname">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Email">
+                        </div>
+                        <div class="modal-input">
+                            <p class="gender-label">Gender:</p>
+                            <input type="radio" class="modal-input-box" value="Male"><span>Male</span>
+                            <input type="radio" class="modal-input-box" value="Female"><span>Female</span>
+                        </div>
+                        <div class="modal-input">
+                            <input type="date" class="modal-input-box" placeholder="Date of Birth">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Phone">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Card Number">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Score">
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" value="Update" class="btn-update">
+                            <input type="submit" value="Delete" class="btn-delete">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Modal -->
+
+        </div>
+        <footer>....</footer>
+    </div>
+</body>
+
+</html>
