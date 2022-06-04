@@ -1,0 +1,207 @@
+html {
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.event_container{
+padding: 5%;
+}
+
+.mn-title {
+    color: #777777;
+}
+
+.orange-line {
+    margin-top: 10px;
+    border: 2px solid #FF7518 ;
+}
+
+.table-function {
+    display: flex;
+    margin-top: 30px;
+}
+
+.search {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.search-cover {
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    height: 40%;
+    width: 100%;
+    border-radius:4px ;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+.btn-search {
+    height: 50%;
+    width: 80px;
+    background-color: #5CB85C;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 15px;
+}
+.btn-search:hover {
+    background-color: #6495ED;
+    cursor: pointer;
+    color: #000;
+}
+
+.btn-add {
+    height: 50%;
+    width: 120px;
+    background-color: #1177D1;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 15px;
+}
+
+.main-table {
+    width: 100%;
+}
+
+.table-admin {
+    border: 1px solid #6495ED;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-head {
+    border: 1px solid #6495ED;
+    background-color: #6495ED;
+    color: #fff;
+    height: 30px;
+    font-size: 15px;
+    justify-content: center;
+}
+
+.head-row {
+    font-weight: 400;
+}
+
+.table-body {
+    background-color: #EEEEEE;
+    height: 35px;
+    text-align: center;
+
+}
+
+.body-row {
+    border: 1px solid #6495ED;
+}
+
+.choose-user {
+    text-decoration: underline;
+}   
+
+.choose-user:hover {
+    cursor: pointer;
+}
+
+/* Model */
+.modal-comtainer {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 30%;
+    height: fit-content;
+}
+
+.modal-head {
+    background-color: #4169E1;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    text-decoration: none;
+    
+}
+
+.modal-close:hover {
+    background-color: #FF0000;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding-top: 16px;
+    width: 100%;
+}
+
+.modal-input {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+}
+
+.modal-input-box {
+    width: 100%;
+    height: 25px;
+}
+
+.modal-footer {
+    height: 70px;
+    width: 100%;
+    background-color: #4169E1;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-update {
+    width: 80%;
+    height: 25px;
+    margin-right: 10%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #5CB85C;
+}
+
+.btn-delete {
+    width: 80%;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #FF0000;
+}
+
+.btn-update:hover {
+    background-color: #5CB85C;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #FF0000;
+    cursor: pointer;
+}
