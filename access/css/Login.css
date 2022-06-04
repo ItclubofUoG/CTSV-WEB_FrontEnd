@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-image: url(/access/img/bg.login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-form{
+    background-color:#fff; 
+    width: 600px;
+    height: 300px;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: calc(23% - 150px);
+    margin-left: calc(48% - 300px);
+    display: block;
+    padding: 30px 0px 30px 0px;
+}
+.login-title{
+    font-weight: bold;
+    color: #777;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.login-item{
+    display: block;
+    padding: 15px;
+    margin: 0px 70px 0px 70px;
+    
+}
+.login-input{
+    display: block;
+    border: none;
+    border-bottom: 0.5px solid #eee;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0px 15px 0px;
+    padding: 0px 15px 0px 15px;
+}
+.login-btn{
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #1177D1;
+    color: #fff;
+    border: none;
+    margin-left: 50%;
+    margin-top: 20px;
+    transform: translateX(-50%);
+    box-shadow: 3px 5px 7px 0.5px #ccc;
+    cursor: pointer;
+}
+.login-btn:hover{
+    background-color: #1d82da;
+    transition: 0.3s;
+}
