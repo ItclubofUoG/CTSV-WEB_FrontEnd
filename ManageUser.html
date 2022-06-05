@@ -41,7 +41,7 @@
                     </tr>
                     <tr class="table-body">
                         <td class="body-row">
-                            <a class="choose-user">GCC19009</a>
+                            <a class="choose-user js-update-user">GCC19009</a>
                         </td>
                         <td class="body-row">Thach Ngoc Trung</td>
                         <td class="body-row">trungtngcc19009@fpt.edu.vn</td>
@@ -66,12 +66,13 @@
             <!-- End table -->
 
 
+
             <!-- Start Modal Update/Delete-->
-            <div class="modal-container">
-                <div class="modal-content">
+            <div class="modal-container js-modal">
+                <div class="modal-content js-modal-content-update-user">
                     <div class="modal-head">
                         <h2 class="modal-label">Update User</h2>
-                        <a class="modal-close">X</a>
+                        <a class="modal-close js-modal-close-update-user">X</a>
                     </div>
                     <form action="" class="modal-body">
                         <div class="modal-input">
@@ -85,8 +86,10 @@
                         </div>
                         <div class="modal-input">
                             <p class="gender-label">Gender:</p>
-                            <input type="radio" class="modal-input-box" value="Male"><span>Male</span>
-                            <input type="radio" class="modal-input-box" value="Female"><span>Female</span>
+                            <div class="gender">
+                                <input type="radio" name="Male" id=""> <span class="type-gender">Male</span>
+                                <input type="radio" name="Male" id=""> <span class="type-gender">Female</span>
+                            </div>
                         </div>
                         <div class="modal-input">
                             <input type="date" class="modal-input-box" placeholder="Date of Birth">
@@ -101,8 +104,12 @@
                             <input type="text" class="modal-input-box" placeholder="Score">
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" value="Update" class="btn-update">
-                            <input type="submit" value="Delete" class="btn-delete">
+                            <div class="btn-footer">
+                                <input type="submit" value="Update" class="btn-update">
+                            </div>
+                            <div class="btn-footer">
+                                <input type="submit" value="Delete" class="btn-delete">
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -111,6 +118,37 @@
 
         </div>
         <footer>....</footer>
+
+
+
+
+        <!-- Script Modal Update -->
+        <script>
+            const UpdateUsers = document.querySelectorAll('.js-update-user') //sellect the class use to use js
+            const modalclose = document.querySelector('.js-modal-close-update-user')
+            const ModalContent = document.querySelector('.js-modal-content-update-user')
+            const modal =document.querySelector('.js-modal')
+            
+            function showModal() {
+                modal.classList.add('open')
+            }
+
+            for(const UpdateUser of UpdateUsers ){
+                UpdateUser.addEventListener('click',showModal)
+            }
+
+            function hideModal(){
+                modal.classList.remove('open')
+            }
+            modalclose.addEventListener('click',hideModal)
+
+            // modal.addEventListener('click',hideModal)
+
+            ModalContent.addEventListener('click', function (event) {
+                event.stopPropagation() //stop nổi bọt
+            })
+        </script>        
+        <!-- End Script modal update -->
     </div>
 </body>
 
