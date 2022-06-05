@@ -33,24 +33,28 @@ html {
 
 
 /* Admin */
-.user_container {
+.user-container {
     padding: 5%;
 }
+
+
 .mn-title {
     color:#777777;
 }
 .orange-line {
     margin-top:10px;
-    border: 2px solid #F0AD4E;
+    border: 2px solid #FF7518;
 }
 .table-function {
     display:flex;
     margin-top: 10px;
-    display: flex;
+    position: relative;
+    height: 40px;
+    margin-bottom:10px;
 }
 .search {
     display: flex;
-    height: 50px;
+    height: 80%;
     align-items: center;
     width: 100%;
 }
@@ -62,14 +66,14 @@ html {
 
 } 
 .search-box {
-    height:50%;
+    height:100%;
     width: 100%;
     border-radius:4px;
     border: 1px solid #ccc;
     padding-left: 10px;
 }
 .btn-search {
-    height:50%;
+    height:100%;
     width: 80px;
     background-color: #5CB85C;
     color: #fff;
@@ -82,7 +86,17 @@ html {
     color: #000;
     cursor: pointer;
 }
-
+.btn-add-right {
+    height: 80%;
+    width: 120px;
+    background-color: #1177D1;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 15px;
+    position: absolute;
+    right: 0;
+}
 .main-table {
     width:100%;
 }
@@ -131,11 +145,13 @@ html {
     align-items: center;
     justify-content: center;
 }
+
 .modal-content {
     background-color:#fff;
     width: 40%;
     height: fit-content;
     animation: modalFadeIn ease 0.5s;
+    border-radius:10px;
 }
 
 @keyframes modalFadeIn {
@@ -157,6 +173,7 @@ html {
     justify-content: center;
     color: #fff;
     position: relative;
+    border-radius:10px 10px 0 0;
 }
 .modal-close {
     position: absolute;
@@ -192,19 +209,22 @@ html {
     width: 100%;
     height: 30px;
     padding-left: 10px;
-    
+    /* border: none; */
+    /* border-bottom: 1px solid #ccc; */
 }
 .modal-footer {
     height: 90px;
     width: 100%;
     background-color:#4169E1;
     margin-top:10px;
+    border-radius: 0 0 10px 10px;
 }
 .btn-footer {
     display: flex;
     justify-content: center;
     height: 30px;
     width: 100%;
+    align-items: center;
 
 }
 .btn-update {
@@ -238,6 +258,54 @@ html {
     display: flex;
 }
 
+
+/* MN Course */
+.course-container {
+    padding: 5%;
+}
+.modal-add-course-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+.modal-update-course-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-add-right:hover {
+    background-color: #4f90c9;
+    cursor: pointer;
+    color: #fff;
+}
+.btn-add-modal {
+    width: 80%;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #5CB85C;
+    margin-top: 10%;
+    color: #fff;
+}
+.btn-add-modal:hover{
+    background-color: #F0AD4E;
+    cursor: pointer;
+}
+
+
 @media screen and (max-width: 900px) { 
 
     .main-table {
@@ -253,6 +321,30 @@ html {
     .table-body {
         height: 15px;
     }
+    .modal-content {
+        width: 80%;
+    }
+    .btn-add-right {
+        width: 70px;
+        margin-left: 15px;
+        font-size: 7px;
+        height: 20px;
+    }
+    .search-box {
+        font-size:8px;
+        padding-left: 5px;
+    }
+    .btn-search {
+        font-size:8px;
+        width:20%;
+    }
+    .table-function {
+        height: 20px;
+    }
+    .search {
+        height: 20px;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) { 
@@ -264,16 +356,11 @@ html {
         font-size:7px;
         font-weight: 400;
     }
-    .search {
-        height: 30px;
 
-    }
-    .search-box {
-        font-size:8px;
-        padding-left: 5px;
-    }
-    .btn-search {
-        font-size:8px;
-        width:27%;
+    .btn-add-right {
+        width: 70px;
+        margin-left: 15px;
+        font-size: 7px;
+        height: 20px;
     }
 }

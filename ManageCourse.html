@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./access/css/ManageUser.css">
+    <title>ManageCourse</title>
+</head>
+
+<body>
+    <div id="container">
+        <!-- Begin Header -->
+        <header></header>
+        <!-- End Header -->
+
+        <div class="course-container">
+            <h1 class="mn-title">Manage Courses</h1>
+            <hr class="orange-line">
+
+            <!-- Search box -->
+            <div class="table-function">
+                <input type="submit" class="btn-add-right" value="Add New Course">
+            </div>
+            <!-- End Search box -->
+
+            <!-- Begin Table -->
+            <div class="main-table">
+                <table class="table-admin">
+                    <tr class="table-head">
+                        <th class="head-row">ID </th>
+                        <th class="head-row">CourseName</th>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row">
+                            <a class="choose-user">1 </a>
+                        </td>
+                        <td class="body-row">K8</td>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row">
+                            <a class="choose-user js-update-event">2 </a>
+                        </td>
+                        <td class="body-row">K9</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- End Table -->
+
+            <!-- Start modal add course -->
+            <div class="modal-add-course-container">
+                <div class="modal-content">
+                    <div class="modal-head">
+                        <h2 class="modal-label">Add New Course</h2>
+                        <a class="modal-close">X</a>
+                    </div>
+                    <form action="" class="modal-body">
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Course Name">
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-footer">
+                                <input type="submit" class="btn-add-modal" value="Add">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--End modal add course  -->
+
+            <!-- Start modal update and delete -->
+            <div class="modal-update-course-container">
+                <div class="modal-content">
+                    <div class="modal-head">
+                        <h2 class="modal-label">Update Course</h2>
+                        <a class="modal-close">X</a>
+                    </div>
+                    <form action="" class="modal-body">
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Course Name">
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-footer">
+                                <input type="submit" class="btn-update" value="Add">
+                            </div>
+                            <div class="btn-footer">
+                                <input type="submit" class="btn-delete" value="Delete">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End modal -->
+        </div>
+
+
+        <!-- Begin Footer -->
+        <footer>
+
+        </footer>
+        <!-- End Footer -->
+
+        <!-- script -->
+        <script>
+
+        </script>
+
+</body>
+
+</html>
