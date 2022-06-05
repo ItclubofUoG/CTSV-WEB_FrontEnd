@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./access/css/ManageEvent.css">
+    <title>ManageMajor</title>
+</head>
+<body>
+    <div id="container">
+        <!-- Begin Header -->
+        <header></header>
+        <!-- End Header -->
+
+            <div class="major-container">
+                <h1 class="mn-title">Manage Major</h1>
+                <hr class="orange-line">
+
+                <!-- Search box -->
+                <div class="table-function">
+                        <input type="submit" class="btn-add-right js-add-major" value="Add New Major">
+                </div>
+                <!-- End Search box -->
+
+                <!-- Begin Table -->
+                <div class="main-table">
+                    <table class="table-admin">
+                        <tr class="table-head">
+                            <th class="head-row">ID</th>
+                            <th class="head-row">Major Name</th>
+                        </tr>
+                        <tr class="table-body">
+                            <td class="body-row">
+                                <a class="choose-user js-update-major">1</a>
+                            </td>
+                            <td class="body-row">Computing</td>
+                        </tr>
+                        <tr class="table-body">
+                            <td class="body-row">None</td>
+                            <td class="body-row">None</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- End Table -->
+
+                <!-- Modal add Major -->
+                <div class="modal-add-container js-modal-add">
+                    <div class="modal-content js-modal-content-add">
+                        <div class="modal-head">
+                            <h2 class="modal-label">Add New Major</h2>
+                            <a class="modal-close js-modal-close-add-major">X</a>
+                        </div>
+                        <form action="" class="modal-body">
+                            <div class="modal-input">
+                                <input type="text" class="modal-input-box" placeholder="Title">
+                            </div>
+                            <div class="modal-footer">
+                                <div class="btn-footer">
+                                    <input type="submit" class="btn-add-modal" value="Add">
+                                </div>
+                            </div>                       
+                        </form>
+                    </div>
+                </div>
+
+                <!--End modal add Major  -->
+
+                <!-- Start modal update and delete -->
+                <div class="modal-container js-modal">
+                    <div class="modal-content js-modal-content-update">
+                        <div class="modal-head">
+                            <h2 class="modal-label">Update Major Information</h2>
+                            <a class="modal-close js-modal-close-update-major">X</a>
+                        </div>
+                        <form action="" class="modal-body">
+                            <div class="modal-input">
+                                <input type="text" class="modal-input-box" placeholder="Title">
+                            </div>
+                            <div class="modal-footer">
+                                <div class="btn-footer">
+                                    <input type="submit" class="btn-update" value="Update">
+                                </div>
+                                <div class="btn-footer">
+                                    <input type="submit" class="btn-delete" value="Delete">
+                                </div>
+                            </div>                       
+                        </form>
+                    </div>
+                </div>
+                <!-- End modal -->
+            </div>
+  
+        <!-- Begin Footer -->
+        <footer></footer>
+        <!-- End Footer -->
+
+        <!-- Script modal update -->
+        <script>
+            const AddMajors = document.querySelectorAll('.js-add-major') //sellect the class used to use js
+            const modalcloseAdd = document.querySelector('.js-modal-close-add-major')
+            const ModalContentAddMajor = document.querySelector('.js-modal-content-add')
+            const modalmajor = document.querySelector('.js-modal-add')
+            
+            function showModalAdd() {
+                modalmajor.classList.add('open')
+            }
+
+            for(const AddMajor of AddMajors ){
+                AddMajor.addEventListener('click',showModalAdd)
+            }
+
+            function hideModalAdd(){
+                modalmajor.classList.remove('open')
+            }
+            modalcloseAdd.addEventListener('click',hideModalAdd)
+
+            ModalContentAddMajor.addEventListener('click', function (event) {
+                event.stopPropagation() //stop nổi bọt
+            })
+            
+            
+            
+            // Modal update
+            const UpdateMajors = document.querySelectorAll('.js-update-major') //sellect the class used to use js
+            const modalclose = document.querySelector('.js-modal-close-update-major')
+            const ModalContent = document.querySelector('.js-modal-content-update')
+            const modal = document.querySelector('.js-modal')
+            
+            function showModal() {
+                modal.classList.add('open')
+            }
+
+            for(const UpdateMajor of UpdateMajors ){
+                UpdateMajor.addEventListener('click',showModal)
+            }
+
+            function hideModal(){
+                modal.classList.remove('open')
+            }
+            modalclose.addEventListener('click',hideModal)
+
+            ModalContent.addEventListener('click', function (event) {
+                event.stopPropagation() //stop nổi bọt
+            })
+        </script>
+        <!-- End Script modal update -->
+    </div>
+</body>
+</html>
