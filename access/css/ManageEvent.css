@@ -178,7 +178,7 @@ padding: 5%;
 }
 
 .btn-update {
-    width: 80%;
+    width: 40%;
     height: 25px;
     margin-right: 10%;
     border: 1px solid #ccc;
@@ -188,7 +188,7 @@ padding: 5%;
 }
 
 .btn-delete {
-    width: 80%;
+    width: 40%;
     height: 25px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -196,12 +196,11 @@ padding: 5%;
     background-color: #FF0000;
 }
 
-.btn-update:hover {
-    background-color: #5CB85C;
+.btn-delete:hover {
+    background-color:#9a3a3a;
     cursor: pointer;
 }
-
-.btn-delete:hover {
-    background-color: #FF0000;
+.btn-update:hover {
+    background-color:#F0AD4E;
     cursor: pointer;
 }
