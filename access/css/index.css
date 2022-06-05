@@ -164,11 +164,11 @@
 }
 
 .left-info{
-    margin-right: 300px;
+    margin-right: 15%;
 }
 
 .right-info{
-    margin-left: 300px;
+    margin-left: 15%;
 }
 
 .info-char{
@@ -189,8 +189,25 @@
     text-align: center;
 }
 
+/* The responsive css for smoother sizing */
 
-/* The responsive css */
+@media screen and (max-width: 1130px){
+    .block-info{
+        display: block;
+    }
+
+    .left-info{
+        margin-right: 0%;
+    }
+    
+    .right-info{
+        margin-top: 15px;
+        margin-left: 0%;
+    }
+}
+
+
+/* The responsive css for phone & tablet */
 
 @media screen and (max-width: 900px) {
     /* The header reponsive css */
@@ -261,6 +278,10 @@
     
     .footer-title{
         border-bottom: 2px solid white;
+    }
+
+    .block-info{
+        display: block;
     }
     
     .left-info{
