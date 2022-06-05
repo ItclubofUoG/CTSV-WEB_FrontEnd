@@ -25,9 +25,9 @@
                             <input type="button" class="btn-search" value="Search">
                         </div>    
                     </form>
-                        <input type="submit" class="btn-add" value="Add New Event">
+                        <input type="submit" class="btn-add js-add-event" value="Add New Event">
                 </div>
-                <!-- End Search box    -->
+                <!-- End Search box -->
 
                 <!-- Begin Table -->
                 <div class="main-table">
@@ -44,7 +44,7 @@
                         </tr>
                         <tr class="table-body">
                             <td class="body-row">
-                                <a class="choose-user">1 | Workshop</a>
+                                <a class="choose-user js-update-event">1 | Workshop</a>
                             </td>
                             <td class="body-row">15/06/2022</td>
                             <td class="body-row">15:00</td>
@@ -68,12 +68,12 @@
                 </div>
                 <!-- End Table -->
 
-                <!-- Start modal update and delete -->
-                <div class="modal-comtainer">
-                    <div class="modal-content">
+                <!-- Modal add event -->
+                <div class="modal-add-container js-modal-add">
+                    <div class="modal-content js-modal-content-add">
                         <div class="modal-head">
-                            <h2 class="modal-label">Update Event</h2>
-                            <a class="modal-close">X</a>
+                            <h2 class="modal-label">Add New Event</h2>
+                            <a class="modal-close js-modal-close-add-event">X</a>
                         </div>
                         <form action="" class="modal-body">
                             <div class="modal-input">
@@ -83,10 +83,10 @@
                                 <input type="text" class="modal-input-box" placeholder="Date">
                             </div>
                             <div class="modal-input">
-                                <input type="date" class="modal-input-box" placeholder="Time Start">
+                                <input type="time" class="modal-input-box" placeholder="Time Start">
                             </div>
                             <div class="modal-input">
-                                <input type="date" class="modal-input-box" placeholder="Time End">
+                                <input type="time" class="modal-input-box" placeholder="Time End">
                             </div>
                             <div class="modal-input">
                                 <input type="text" class="modal-input-box" placeholder="Location">
@@ -102,8 +102,56 @@
                                 <input type="button" class="btn-choose-file" value="Choose File">
                             </div>
                             <div class="modal-footer">
-                                <input type="submit" class="btn-update" value="Update">
-                                <input type="submit" class="btn-delete" value="Delete">
+                                <div class="btn-footer">
+                                    <input type="submit" class="btn-add-modal" value="Add">
+                                </div>
+                            </div>                       
+                        </form>
+                    </div>
+                </div>
+
+                <!--End modal add event  -->
+
+                <!-- Start modal update and delete -->
+                <div class="modal-container js-modal">
+                    <div class="modal-content js-modal-content-update">
+                        <div class="modal-head">
+                            <h2 class="modal-label">Update Event</h2>
+                            <a class="modal-close js-modal-close-update-event">X</a>
+                        </div>
+                        <form action="" class="modal-body">
+                            <div class="modal-input">
+                                <input type="text" class="modal-input-box" placeholder="Title">
+                            </div>
+                            <div class="modal-input">
+                                <input type="text" class="modal-input-box" placeholder="Date">
+                            </div>
+                            <div class="modal-input">
+                                <input type="time" class="modal-input-box" placeholder="Time Start">
+                            </div>
+                            <div class="modal-input">
+                                <input type="time" class="modal-input-box" placeholder="Time End">
+                            </div>
+                            <div class="modal-input">
+                                <input type="text" class="modal-input-box" placeholder="Location">
+                            </div>
+                            <div class="modal-input">
+                                <input type="text" class="modal-input-box" placeholder="Description">
+                            </div>                          
+                            <div class="modal-input">
+                                <input type="text" class="modal-input-box" placeholder="Score">
+                            </div>
+                            <div class="modal-input">
+                                <input type="text" class="modal-input-box" placeholder="Figure">
+                                <input type="button" class="btn-choose-file" value="Choose File">
+                            </div>
+                            <div class="modal-footer">
+                                <div class="btn-footer">
+                                    <input type="submit" class="btn-update" value="Update">
+                                </div>
+                                <div class="btn-footer">
+                                    <input type="submit" class="btn-delete" value="Delete">
+                                </div>
                             </div>                       
                         </form>
                     </div>
@@ -114,6 +162,57 @@
         <!-- Begin Footer -->
         <footer></footer>
         <!-- End Footer -->
+
+        <!-- Script nodal update -->
+        <script>
+            const AddEvents = document.querySelectorAll('.js-add-event') //sellect the class used to use js
+            const modalcloseAdd = document.querySelector('.js-modal-close-add-event')
+            const ModalContentAddEvent = document.querySelector('.js-modal-content-add')
+            const modalEvent = document.querySelector('.js-modal-add')
+            
+            function showModalAdd() {
+                modalEvent.classList.add('open')
+            }
+
+            for(const AddEvent of AddEvents ){
+                AddEvent.addEventListener('click',showModalAdd)
+            }
+
+            function hideModalAdd(){
+                modalEvent.classList.remove('open')
+            }
+            modalcloseAdd.addEventListener('click',hideModalAdd)
+
+            ModalContentAddEvent.addEventListener('click', function (event) {
+                event.stopPropagation() //stop nổi bọt
+            })
+            
+            
+            
+            // Modal update
+            const UpdateEvents = document.querySelectorAll('.js-update-event') //sellect the class used to use js
+            const modalclose = document.querySelector('.js-modal-close-update-event')
+            const ModalContent = document.querySelector('.js-modal-content-update')
+            const modal = document.querySelector('.js-modal')
+            
+            function showModal() {
+                modal.classList.add('open')
+            }
+
+            for(const UpdateEvent of UpdateEvents ){
+                UpdateEvent.addEventListener('click',showModal)
+            }
+
+            function hideModal(){
+                modal.classList.remove('open')
+            }
+            modalclose.addEventListener('click',hideModal)
+
+            ModalContent.addEventListener('click', function (event) {
+                event.stopPropagation() //stop nổi bọt
+            })
+        </script>
+        <!-- End Script modal update -->
     </div>
 </body>
 </html>
