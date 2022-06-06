@@ -140,6 +140,7 @@ html {
     width: 30%;
     height: fit-content;
     animation: modalFadeIn ease 0.5s;
+    border-radius:10px;
 }
 
 @keyframes modalFadeIn {
@@ -161,6 +162,7 @@ html {
     justify-content: center;
     color: #fff;
     position: relative;
+    border-radius:10px 10px 0 0;
 }
 
 .modal-close {
@@ -198,6 +200,7 @@ html {
     width: 100%;
     background-color: #4169E1;
     margin-top: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 .btn-footer {
