@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ListofMembers</title>
-    <link rel="stylesheet" href="./access/css/ManageUser.css">
+    <link rel="stylesheet" href="./assets/css/Admin.css">
 </head>
 
 <body>
     <div id="container">
-        <header>...</header>
+        
+        <header>....</header>
+
+
+
         <div class="list-container">
             <h1 class="mn-title">List Of Members</h1>
             <hr class="orange-line">
@@ -84,21 +88,21 @@
                             </div>
                         </div>
                         <span class="filter-label" for="course">Filter By Course and Major: </span>
-                            <div class="filter-bymajor">
-                                <div class="choose-course-major">
-                                    <select class="select-mg-cr" name="course" id="course">
-                                        <option value="k9">K9</option>
-                                        <option value="k8">K8</option>
-                                        <option value="k10">K10</option>
-                                    </select>
-                                </div>
-                                <div class="choose-course-major">
-                                    <select class="select-mg-cr" name="major" id="major">
-                                        <option value="computing">computing</option>
-                                        <option value="business">business</option>
-                                    </select>
-                                </div>
+                        <div class="filter-bymajor">
+                            <div class="choose-course-major">
+                                <select class="select-mg-cr" name="course" id="course">
+                                    <option value="k9">K9</option>
+                                    <option value="k8">K8</option>
+                                    <option value="k10">K10</option>
+                                </select>
                             </div>
+                            <div class="choose-course-major">
+                                <select class="select-mg-cr" name="major" id="major">
+                                    <option value="computing">computing</option>
+                                    <option value="business">business</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="modal-footer">
                             <div class="btn-footer">
                                 <input class="btn-filter" type="submit" value="Filter">
@@ -107,13 +111,15 @@
                                 <input class="btn-export" type="submit" value="Export">
                             </div>
                         </div>
-                        
+
                 </div>
                 </form>
             </div>
         </div>
         <!--End Modal Filter Student-->
-    </div>
+
+        <footer>.....</footer>
+
     </div>
 
     <!-- Start script -->
@@ -122,19 +128,19 @@
         const modalcloseFilter = document.querySelector('.js-modal-close-filter')
         const ModalContentFilter = document.querySelector('.js-modal-content-filter')
         const modalfilter = document.querySelector('.js-modal-filter')
-            
+
         function showModalAdd() {
             modalfilter.classList.add('open')
         }
 
-        for(const Filter of Filters ){
-            Filter.addEventListener('click',showModalAdd)
+        for (const Filter of Filters) {
+            Filter.addEventListener('click', showModalAdd)
         }
 
-        function hideModalAdd(){
+        function hideModalAdd() {
             modalfilter.classList.remove('open')
         }
-        modalcloseFilter.addEventListener('click',hideModalAdd)
+        modalcloseFilter.addEventListener('click', hideModalAdd)
 
         ModalContentFilter.addEventListener('click', function (event) {
             event.stopPropagation() //stop nổi bọt

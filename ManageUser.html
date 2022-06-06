@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ManageUser</title>
     <link rel="stylesheet" href="./access/css/ManageUser.css">
+
 </head>
 
 <body>
     <div id="container">
-        <header>....</header>
+       <!-- header -->
+        <header>......</header>
+
+        <!-- body -->
+
         <div class="user-container">
             <h1 class="mn-title">Manage User</h1>
             <hr class="orange-line">
@@ -117,9 +122,10 @@
             <!-- End Modal -->
 
         </div>
-        <footer>....</footer>
 
+        <footer>.....</footer>
 
+    </div>
 
 
         <!-- Script Modal Update -->
@@ -127,29 +133,29 @@
             const UpdateUsers = document.querySelectorAll('.js-update-user') //sellect the class use to use js
             const modalclose = document.querySelector('.js-modal-close-update-user')
             const ModalContent = document.querySelector('.js-modal-content-update-user')
-            const modal =document.querySelector('.js-modal')
-            
+            const modal = document.querySelector('.js-modal')
+
             function showModal() {
                 modal.classList.add('open')
             }
 
-            for(const UpdateUser of UpdateUsers ){
-                UpdateUser.addEventListener('click',showModal)
+            for (const UpdateUser of UpdateUsers) {
+                UpdateUser.addEventListener('click', showModal)
             }
 
-            function hideModal(){
+            function hideModal() {
                 modal.classList.remove('open')
             }
-            modalclose.addEventListener('click',hideModal)
+            modalclose.addEventListener('click', hideModal)
 
             // modal.addEventListener('click',hideModal)
 
             ModalContent.addEventListener('click', function (event) {
                 event.stopPropagation() //stop nổi bọt
             })
-        </script>        
+        </script>
         <!-- End Script modal update -->
-    </div>
+    
 </body>
 
 </html>
