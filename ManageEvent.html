@@ -1,164 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ManageEvent</title>
-    <link rel="stylesheet" href="./access/css/ManageEvent.css">
+    <link rel="stylesheet" href="./access/css/ManageUser.css">
 </head>
+
 <body>
     <div id="container">
         <!-- Begin Header -->
         <header></header>
         <!-- End Header -->
 
-            <div class="event-container">
-                <h1 class="mn-title">Manage Event</h1>
-                <hr class="orange-line">
+        <div class="event-container">
+            <h1 class="mn-title">Manage Event</h1>
+            <hr class="orange-line">
 
-                <!-- Search box -->
-                <div class="table-function">
-                    <form action="" class="search">
-                        <div class="search-cover">
-                            <input type="text" class="search-box"  placeholder="Search Event">
-                            <input type="button" class="btn-search" value="Search">
-                        </div>    
-                    </form>
-                        <input type="submit" class="btn-add js-add-event" value="Add New Event">
-                </div>
-                <!-- End Search box -->
-
-                <!-- Begin Table -->
-                <div class="main-table">
-                    <table class="table-admin">
-                        <tr class="table-head">
-                            <th class="head-row">ID | Title</th>
-                            <th class="head-row">Date</th>
-                            <th class="head-row">Time Start</th>
-                            <th class="head-row">Time End</th>
-                            <th class="head-row">Location</th>
-                            <th class="head-row">Description</th>
-                            <th class="head-row">Figure Event</th>
-                            <th class="head-row">Score</th>
-                        </tr>
-                        <tr class="table-body">
-                            <td class="body-row">
-                                <a class="choose-user js-update-event">1 | Workshop</a>
-                            </td>
-                            <td class="body-row">15/06/2022</td>
-                            <td class="body-row">15:00</td>
-                            <td class="body-row">20:00</td>
-                            <td class="body-row">Room F501</td>
-                            <td class="body-row">Workshop about...</td>
-                            <td class="body-row">Figure.png</td>
-                            <td class="body-row">300</td>
-                        </tr>
-                        <tr class="table-body">
-                            <td class="body-row">None</td>
-                            <td class="body-row">None</td>
-                            <td class="body-row">None</td>
-                            <td class="body-row">None</td>
-                            <td class="body-row">None</td>
-                            <td class="body-row">None</td>
-                            <td class="body-row">None</td>
-                            <td class="body-row">None</td>
-                        </tr>
-                    </table>
-                </div>
-                <!-- End Table -->
-
-                <!-- Modal add event -->
-                <div class="modal-add-container js-modal-add">
-                    <div class="modal-content js-modal-content-add">
-                        <div class="modal-head">
-                            <h2 class="modal-label">Add New Event</h2>
-                            <a class="modal-close js-modal-close-add-event">X</a>
-                        </div>
-                        <form action="" class="modal-body">
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Title">
-                            </div>
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Date">
-                            </div>
-                            <div class="modal-input">
-                                <input type="time" class="modal-input-box" placeholder="Time Start">
-                            </div>
-                            <div class="modal-input">
-                                <input type="time" class="modal-input-box" placeholder="Time End">
-                            </div>
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Location">
-                            </div>
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Description">
-                            </div>                          
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Score">
-                            </div>
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Figure">
-                                <input type="button" class="btn-choose-file" value="Choose File">
-                            </div>
-                            <div class="modal-footer">
-                                <div class="btn-footer">
-                                    <input type="submit" class="btn-add-modal" value="Add">
-                                </div>
-                            </div>                       
-                        </form>
+            <!-- Search box -->
+            <div class="table-function">
+                <form action="" class="search">
+                    <div class="search-cover">
+                        <input type="text" class="search-box" placeholder="Search Event">
                     </div>
-                </div>
-
-                <!--End modal add event  -->
-
-                <!-- Start modal update and delete -->
-                <div class="modal-container js-modal">
-                    <div class="modal-content js-modal-content-update">
-                        <div class="modal-head">
-                            <h2 class="modal-label">Update Event</h2>
-                            <a class="modal-close js-modal-close-update-event">X</a>
-                        </div>
-                        <form action="" class="modal-body">
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Title">
-                            </div>
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Date">
-                            </div>
-                            <div class="modal-input">
-                                <input type="time" class="modal-input-box" placeholder="Time Start">
-                            </div>
-                            <div class="modal-input">
-                                <input type="time" class="modal-input-box" placeholder="Time End">
-                            </div>
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Location">
-                            </div>
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Description">
-                            </div>                          
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Score">
-                            </div>
-                            <div class="modal-input">
-                                <input type="text" class="modal-input-box" placeholder="Figure">
-                                <input type="button" class="btn-choose-file" value="Choose File">
-                            </div>
-                            <div class="modal-footer">
-                                <div class="btn-footer">
-                                    <input type="submit" class="btn-update" value="Update">
-                                </div>
-                                <div class="btn-footer">
-                                    <input type="submit" class="btn-delete" value="Delete">
-                                </div>
-                            </div>                       
-                        </form>
-                    </div>
-                </div>
-                <!-- End modal -->
+                    <input type="button" class="btn-search" value="Search">
+                </form>
+                <input type="submit" class="btn-add-right js-add-event" value="Add New Event">
             </div>
-  
+            <!-- End Search box -->
+
+            <!-- Begin Table -->
+            <div class="main-table">
+                <table class="table-admin">
+                    <tr class="table-head">
+                        <th class="head-row">ID | Title</th>
+                        <th class="head-row">Date</th>
+                        <th class="head-row">Time Start</th>
+                        <th class="head-row">Time End</th>
+                        <th class="head-row">Location</th>
+                        <th class="head-row">Description</th>
+                        <th class="head-row">Figure Event</th>
+                        <th class="head-row">Score</th>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row">
+                            <a class="choose-user js-update-event">1 | Workshop</a>
+                        </td>
+                        <td class="body-row">15/06/2022</td>
+                        <td class="body-row">15:00</td>
+                        <td class="body-row">20:00</td>
+                        <td class="body-row">Room F501</td>
+                        <td class="body-row">Workshop about...</td>
+                        <td class="body-row">Figure.png</td>
+                        <td class="body-row">300</td>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                        <td class="body-row">None</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- End Table -->
+
+            <!-- Modal add event -->
+            <div class="modal-add-container js-modal-add">
+                <div class="modal-content js-modal-content-add">
+                    <div class="modal-head">
+                        <h2 class="modal-label">Add New Event</h2>
+                        <a class="modal-close js-modal-close-add-event">X</a>
+                    </div>
+                    <form action="" class="modal-body">
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Title">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Date">
+                        </div>
+                        <div class="modal-input">
+                            <input type="time" class="modal-input-box" placeholder="Time Start">
+                        </div>
+                        <div class="modal-input">
+                            <input type="time" class="modal-input-box" placeholder="Time End">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Location">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Description">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Score">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Figure">
+                            <input type="button" class="btn-choose-file" value="Choose File">
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-footer">
+                                <input type="submit" class="btn-add-modal" value="Add">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!--End modal add event  -->
+
+            <!-- Start modal update and delete -->
+            <div class="modal-container js-modal">
+                <div class="modal-content js-modal-content-update">
+                    <div class="modal-head">
+                        <h2 class="modal-label">Update Event</h2>
+                        <a class="modal-close js-modal-close-update-event">X</a>
+                    </div>
+                    <form action="" class="modal-body">
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Title">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Date">
+                        </div>
+                        <div class="modal-input">
+                            <input type="time" class="modal-input-box" placeholder="Time Start">
+                        </div>
+                        <div class="modal-input">
+                            <input type="time" class="modal-input-box" placeholder="Time End">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Location">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Description">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Score">
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" class="modal-input-box" placeholder="Figure">
+                            <input type="button" class="btn-choose-file" value="Choose File">
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-footer">
+                                <input type="submit" class="btn-update" value="Update">
+                            </div>
+                            <div class="btn-footer">
+                                <input type="submit" class="btn-delete" value="Delete">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End modal -->
+        </div>
+
         <!-- Begin Footer -->
         <footer></footer>
         <!-- End Footer -->
@@ -169,44 +171,44 @@
             const modalcloseAdd = document.querySelector('.js-modal-close-add-event')
             const ModalContentAddEvent = document.querySelector('.js-modal-content-add')
             const modalEvent = document.querySelector('.js-modal-add')
-            
+
             function showModalAdd() {
                 modalEvent.classList.add('open')
             }
 
-            for(const AddEvent of AddEvents ){
-                AddEvent.addEventListener('click',showModalAdd)
+            for (const AddEvent of AddEvents) {
+                AddEvent.addEventListener('click', showModalAdd)
             }
 
-            function hideModalAdd(){
+            function hideModalAdd() {
                 modalEvent.classList.remove('open')
             }
-            modalcloseAdd.addEventListener('click',hideModalAdd)
+            modalcloseAdd.addEventListener('click', hideModalAdd)
 
             ModalContentAddEvent.addEventListener('click', function (event) {
                 event.stopPropagation() //stop nổi bọt
             })
-            
-            
-            
+
+
+
             // Modal update
             const UpdateEvents = document.querySelectorAll('.js-update-event') //sellect the class used to use js
             const modalclose = document.querySelector('.js-modal-close-update-event')
             const ModalContent = document.querySelector('.js-modal-content-update')
             const modal = document.querySelector('.js-modal')
-            
+
             function showModal() {
                 modal.classList.add('open')
             }
 
-            for(const UpdateEvent of UpdateEvents ){
-                UpdateEvent.addEventListener('click',showModal)
+            for (const UpdateEvent of UpdateEvents) {
+                UpdateEvent.addEventListener('click', showModal)
             }
 
-            function hideModal(){
+            function hideModal() {
                 modal.classList.remove('open')
             }
-            modalclose.addEventListener('click',hideModal)
+            modalclose.addEventListener('click', hideModal)
 
             ModalContent.addEventListener('click', function (event) {
                 event.stopPropagation() //stop nổi bọt
@@ -215,4 +217,5 @@
         <!-- End Script modal update -->
     </div>
 </body>
+
 </html>

@@ -1,109 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./access/css/ListOfMembers.css">
+    <title>ListofMembers</title>
+    <link rel="stylesheet" href="./access/css/ManageUser.css">
 </head>
+
 <body>
     <div id="container">
         <header>...</header>
-        <div class="user_container">
+        <div class="list-container">
             <h1 class="mn-title">List Of Members</h1>
             <hr class="orange-line">
-                <div class="table-function">
+            <div class="table-function">
                 <form acction="" class="search">
                     <div class="search-cover">
-                        <input type="text" class="search-box" placeholder="">
+                        <input type="text" class="search-box" placeholder="Search">
                     </div>
-                        <input class="btn-search" type="button" value="search">
+                    <input class="btn-search" type="button" value="search">
                 </form>
-                        <input class="btn-add" type="button" value="Filter">
-                </div>
+                <input class="btn-add-right" type="button" value="Filter">
+            </div>
 
-                <div class="main-table">
-                    <table class="table-admin">
-                        <tr class="table-head">
-                            <th class="head-row">ID</th>
-                            <th class="head-row">Name</th>
-                            <th class="head-row">Email</th>
-                            <th class="head-row">Gender</th>
-                            <th class="head-row">Phone</th>
-                            <th class="head-row">Major</th>
-                            <th class="head-row">Course</th>
-                            <th class="head-row">Total</th>
-                        </tr>
-                        <tr class="table-body">
-                            <td class="body-row">
-                               <a class="choose user">
-                                   GCC19001
-                               </a> 
-                            </td>
-                            <td class="body-row">Nguyen Van A</td>
-                            <td class="body-row">Anvgcc19001@fpt.edu.vn</td>
-                            <td class="body-row">Male</td>
-                            <td class="body-row">0779872</td>
-                            <td class="body-row">Computing</td>
-                            <td class="body-row">K9</td>
-                            <td class="body-row">10</td>
-                        </tr>
-                        <tr class="table-body">
-                            <td class="body-row">GCC19002</td>
-                            <td class="body-row">Tran Van B</td>
-                            <td class="body-row">Btvgcc19002@fpt.edu.vn</td>
-                            <td class="body-row">Male</td>
-                            <td class="body-row">023456</td>
-                            <td class="body-row">Business</td>
-                            <td class="body-row">K9</td>
-                            <td class="body-row">10</td>
-                        </tr>
-                    </table>
-                </div>
-                <!--End Table-->
+            <div class="main-table">
+                <table class="table-admin">
+                    <tr class="table-head">
+                        <th class="head-row">ID</th>
+                        <th class="head-row">Name</th>
+                        <th class="head-row">Email</th>
+                        <th class="head-row">Gender</th>
+                        <th class="head-row">Phone</th>
+                        <th class="head-row">Major</th>
+                        <th class="head-row">Course</th>
+                        <th class="head-row">Total</th>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row">
+                            <a class="choose user">
+                                GCC19001
+                            </a>
+                        </td>
+                        <td class="body-row">Nguyen Van A</td>
+                        <td class="body-row">Anvgcc19001@fpt.edu.vn</td>
+                        <td class="body-row">Male</td>
+                        <td class="body-row">0779872</td>
+                        <td class="body-row">Computing</td>
+                        <td class="body-row">K9</td>
+                        <td class="body-row">10</td>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row">GCC19002</td>
+                        <td class="body-row">Tran Van B</td>
+                        <td class="body-row">Btvgcc19002@fpt.edu.vn</td>
+                        <td class="body-row">Male</td>
+                        <td class="body-row">023456</td>
+                        <td class="body-row">Business</td>
+                        <td class="body-row">K9</td>
+                        <td class="body-row">10</td>
+                    </tr>
+                </table>
+            </div>
+            <!--End Table-->
 
-                <!--Start Modal Filer Student-->
-                <div class="modal-container">
-                    <div class="modal-content">
-                        <div class="modal-head">
-                            <h2 class="modal-label"> Filter Student</h2>
-                            <a class="modal-close">X</a>
-                        </div>
-                        <form action="" class="modal-body">
-                            <div class="filter-label"><span> Filter By Month:</span>
-                            <div class="modal-input">
+            <!--Start Modal Filer Student-->
+            <div class="modal-container-list">
+                <div class="modal-content">
+                    <div class="modal-head">
+                        <h2 class="modal-label"> Filter Student</h2>
+                        <a class="modal-close">X</a>
+                    </div>
+                    <form action="" class="modal-body">
+                        <span class="filter-label"> Filter By Month:</span>
+                        <div class="filter-bymonth">
+                            <div class="modal-input-month">
                                 <input type="date" class="modal-input-box" placeholder="Start Month">
                             </div>
-                            <p>to</p>
-                            <div class="modal-input">
+                            <p class="filter-label">to</p>
+                            <div class="modal-input-month">
                                 <input type="date" class="modal-input-box" placeholder="End Month">
                             </div>
                         </div>
-                            <div class="body-label" for="course">Filter By Course and Major:
-                               <div class="choose-course">
-                                    <select name="course" id="course">
+                        <span class="filter-label" for="course">Filter By Course and Major: </span>
+                            <div class="filter-bymajor">
+                                <div class="choose-course-major">
+                                    <select class="select-mg-cr" name="course" id="course">
                                         <option value="k9">K9</option>
                                         <option value="k8">K8</option>
                                         <option value="k10">K10</option>
                                     </select>
                                 </div>
-                                <div class="choose-major">
-                                    <select name="major" id="major">
+                                <div class="choose-course-major">
+                                    <select class="select-mg-cr" name="major" id="major">
                                         <option value="computing">computing</option>
                                         <option value="business">business</option>
                                     </select>
                                 </div>
-                                <div class="modal-footer">
-                                    <input class="btn-filter" type="submit" value="Filter">
-                                    <input class="btn-export" type="submit" value="Export">
-                                </div>
                             </div>
-                        </form>
-                    </div>
+                        <div class="modal-footer">
+                            <div class="btn-footer">
+                                <input class="btn-filter" type="submit" value="Filter">
+                            </div>
+                            <div class="btn-footer">
+                                <input class="btn-export" type="submit" value="Export">
+                            </div>
+                        </div>
+                        
                 </div>
-                <!--End Modal Filter Student-->
+                </form>
+            </div>
         </div>
+        <!--End Modal Filter Student-->
+    </div>
     </div>
 </body>
+
 </html>
