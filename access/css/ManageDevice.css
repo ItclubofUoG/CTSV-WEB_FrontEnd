@@ -1,0 +1,93 @@
+.Manager_Container {
+  padding: 5%;
+}
+.mm-title {
+  color: #777777;
+}
+.table-inside {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #2b3494;
+}
+.table-outside {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid white;
+}
+.head-row {
+  border: 3px solid white;
+}
+
+.table-head {
+  background-color: #6495ed;
+  margin-top: 30px;
+  color: #fff;
+}
+.orange-line {
+  margin-top: 10px;
+  border: 2px solid #fbad4e;
+  color: #fff;
+}
+.table-outside {
+  background-color: #4169e1;
+  margin-top: 30px;
+  color: #fff;
+}
+.btn-reload {
+  height: 25px;
+  width: 100%;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+.btn-Enrollment {
+  width: 100%;
+  height: 25px;
+  background-color: #32cd32;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+.btn-Attendance {
+  width: 100%;
+  height: 25px;
+  background-color: #f0924e;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+.btn-Delete {
+  height: 25px;
+  width: 100%;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+.btn-NewDevice {
+  float: right;
+  height: 25px; 
+  margin-right: 15px;
+  font-size: large;
+  background-color: #32cd32;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px solid;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100%;
+  margin: 10px;
+  height: 25px; 
+  margin-right: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+
