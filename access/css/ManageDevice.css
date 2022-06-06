@@ -94,7 +94,7 @@
   background-color: #e60000;
   cursor: pointer;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .btn-reload {
     height: 15px;
     font-size: 5px;
