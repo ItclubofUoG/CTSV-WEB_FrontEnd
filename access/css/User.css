@@ -1,0 +1,36 @@
+.attendence-container {
+    padding: 5%;
+}
+.choose-month-cover{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.choose-month-title {
+    font-size:17px
+}
+.search-month {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.table-user{
+    border: 1px solid #ccc;
+    width: 100%;
+    border-collapse: collapse;
+}
+.total-score {
+    color:brown;
+    font-size: 17px;
+}
+.search-box {
+    height: 100%;
+}
+@media screen and (max-width: 900px) { 
+    .total-score {
+        font-size: 9px;
+    }
+}
