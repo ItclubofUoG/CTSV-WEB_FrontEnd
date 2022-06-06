@@ -22,7 +22,7 @@
                     </div>
                     <input class="btn-search" type="button" value="search">
                 </form>
-                <input class="btn-add-right js-filter" type="button" value="Filter">
+                <input class="btn-add-right" type="button" value="Filter">
             </div>
 
             <div class="main-table">
@@ -66,11 +66,11 @@
             <!--End Table-->
 
             <!--Start Modal Filer Student-->
-            <div class="modal-container-list js-modal-filter">
-                <div class="modal-content js-modal-content-filter">
+            <div class="modal-container-list">
+                <div class="modal-content">
                     <div class="modal-head">
                         <h2 class="modal-label"> Filter Student</h2>
-                        <a class="modal-close js-modal-close-filter">X</a>
+                        <a class="modal-close">X</a>
                     </div>
                     <form action="" class="modal-body">
                         <span class="filter-label"> Filter By Month:</span>
@@ -115,34 +115,6 @@
         <!--End Modal Filter Student-->
     </div>
     </div>
-
-    <!-- Start script -->
-    <script>
-        const Filters = document.querySelectorAll('.js-filter') //sellect the class used to use js
-        const modalcloseFilter = document.querySelector('.js-modal-close-filter')
-        const ModalContentFilter = document.querySelector('.js-modal-content-filter')
-        const modalfilter = document.querySelector('.js-modal-filter')
-            
-        function showModalAdd() {
-            modalfilter.classList.add('open')
-        }
-
-        for(const Filter of Filters ){
-            Filter.addEventListener('click',showModalAdd)
-        }
-
-        function hideModalAdd(){
-            modalfilter.classList.remove('open')
-        }
-        modalcloseFilter.addEventListener('click',hideModalAdd)
-
-        ModalContentFilter.addEventListener('click', function (event) {
-            event.stopPropagation() //stop nổi bọt
-        })        
-    </script>
-    <!-- End script -->
-
-
 </body>
 
 </html>

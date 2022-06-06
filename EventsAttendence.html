@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence</title>
+    <link rel="stylesheet" href="./access/css/ManageUser.css">
+    <link rel="stylesheet" href="./access/css/User.css">
+</head>
+<body>
+    <div  id="container">
+        <header>....</header>
+        <div class="attendence-container">
+            <h1 class="mn-title">Attendence</h1>
+            <hr class="orange-line">
+            <!-- search box-->
+
+            <div class="table-function">
+                <form action="" class="search-month">
+                    <p class="choose-month-title">Choose Month</p>
+                    <div class="choose-month-cover">
+                        <input type="date" class="search-box">
+                    </div>
+                    <input class="btn-search" type="button" value="Search">
+                </form>
+            </div>
+            <!--End Search Box-->
+
+            <!--Start Table Attendence-->
+            <div class="main-table">
+                <table class="table-user">
+                    <tr class="table-head">
+                        <th class="head-row">Name</th>
+                        <th class="head-row">Date</th>
+                        <th class="head-row">Event Name</th>
+                        <th class="head-row">Time In</th>
+                        <th class="head-row">Time Out</th>
+                        <th class="head-row">Score</th>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row">Nguyen Van A</td>
+                        <td class="body-row">03/02/2022</td>
+                        <td class="body-row">IT Club</td>
+                        <td class="body-row">17:00:00</td>
+                        <td class="body-row">19:00:00</td>
+                        <td class="body-row">2</td>
+                    </tr>
+                    <tr class="table-body">
+                        <td class="body-row" colspan="5">
+                            <b class="total-score">Total Score</b>
+                        </td>
+                        <td class="body-row">2</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- End table -->
+        </div>
+        <footer>....</footer>
+    </div>
+    
+</body>
+</html>
