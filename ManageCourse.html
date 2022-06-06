@@ -21,7 +21,7 @@
 
             <!-- Search box -->
             <div class="table-function">
-                <input type="submit" class="btn-add-right" value="Add New Course">
+                <input type="submit" class="btn-add-right js-add-course" value="Add New Course">
             </div>
             <!-- End Search box -->
 
@@ -34,13 +34,13 @@
                     </tr>
                     <tr class="table-body">
                         <td class="body-row">
-                            <a class="choose-user">1 </a>
+                            <a class="choose-user js-update-course">1 </a>
                         </td>
                         <td class="body-row">K8</td>
                     </tr>
                     <tr class="table-body">
                         <td class="body-row">
-                            <a class="choose-user js-update-event">2 </a>
+                            <a class="choose-user">2 </a>
                         </td>
                         <td class="body-row">K9</td>
                     </tr>
@@ -48,52 +48,51 @@
             </div>
             <!-- End Table -->
 
-            <!-- Start modal add course -->
-            <div class="modal-add-course-container">
-                <div class="modal-content">
+            <!-- Modal add Course -->
+            <div class="modal-add-container js-modal-add">
+                <div class="modal-content js-modal-content-add">
                     <div class="modal-head">
                         <h2 class="modal-label">Add New Course</h2>
-                        <a class="modal-close">X</a>
+                        <a class="modal-close js-modal-close-add-course">X</a>
                     </div>
                     <form action="" class="modal-body">
                         <div class="modal-input">
-                            <input type="text" class="modal-input-box" placeholder="Course Name">
+                            <input type="text" class="modal-input-box" placeholder="Title">
                         </div>
                         <div class="modal-footer">
                             <div class="btn-footer">
                                 <input type="submit" class="btn-add-modal" value="Add">
                             </div>
-                        </div>
+                        </div>                       
                     </form>
                 </div>
             </div>
-            <!--End modal add course  -->
+
+            <!--End modal add Course  -->
 
             <!-- Start modal update and delete -->
-            <div class="modal-update-course-container">
-                <div class="modal-content">
+            <div class="modal-container js-modal">
+                <div class="modal-content js-modal-content-update">
                     <div class="modal-head">
-                        <h2 class="modal-label">Update Course</h2>
-                        <a class="modal-close">X</a>
+                        <h2 class="modal-label">Update Course Information</h2>
+                        <a class="modal-close js-modal-close-update-course">X</a>
                     </div>
                     <form action="" class="modal-body">
                         <div class="modal-input">
-                            <input type="text" class="modal-input-box" placeholder="Course Name">
+                            <input type="text" class="modal-input-box" placeholder="Title">
                         </div>
                         <div class="modal-footer">
                             <div class="btn-footer">
-                                <input type="submit" class="btn-update" value="Add">
+                                <input type="submit" class="btn-update" value="Update">
                             </div>
                             <div class="btn-footer">
                                 <input type="submit" class="btn-delete" value="Delete">
                             </div>
-                        </div>
+                        </div>                       
                     </form>
                 </div>
             </div>
             <!-- End modal -->
-        </div>
-
 
         <!-- Begin Footer -->
         <footer>
@@ -101,10 +100,57 @@
         </footer>
         <!-- End Footer -->
 
-        <!-- script -->
+        <!-- Script modal add -->
         <script>
+            //Modal add
+            const AddCourses = document.querySelectorAll('.js-add-course') //sellect the class used to use js
+            const modalcloseAdd = document.querySelector('.js-modal-close-add-course')
+            const ModalContentAddCourse = document.querySelector('.js-modal-content-add')
+            const modalcourse = document.querySelector('.js-modal-add')
+            
+            function showModalAdd() {
+                modalcourse.classList.add('open')
+            }
 
+            for(const AddCourse of AddCourses ){
+                AddCourse.addEventListener('click',showModalAdd)
+            }
+
+            function hideModalAdd(){
+                modalcourse.classList.remove('open')
+            }
+            modalcloseAdd.addEventListener('click',hideModalAdd)
+
+            ModalContentAddCourse.addEventListener('click', function (event) {
+                event.stopPropagation() //stop nổi bọt
+            })
+            
+            
+            
+            // Modal update
+            const UpdateCourses = document.querySelectorAll('.js-update-course') //sellect the class used to use js
+            const modalclose = document.querySelector('.js-modal-close-update-course')
+            const ModalContent = document.querySelector('.js-modal-content-update')
+            const modal = document.querySelector('.js-modal')
+            
+            function showModal() {
+                modal.classList.add('open')
+            }
+
+            for(const UpdateCourse of UpdateCourses ){
+                UpdateCourse.addEventListener('click',showModal)
+            }
+
+            function hideModal(){
+                modal.classList.remove('open')
+            }
+            modalclose.addEventListener('click',hideModal)
+
+            ModalContent.addEventListener('click', function (event) {
+                event.stopPropagation() //stop nổi bọt
+            })
         </script>
+        <!-- End Script modal update -->
 
 </body>
 

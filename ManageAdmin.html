@@ -18,7 +18,7 @@
             <hr class="orange-line">
             <!-- Search box -->
             <div class="table-function">
-                <input type="submit" class="btn-add-right" value="Add New Admin">
+                <input type="submit" class="btn-add-right js-add-admin" value="Add New Admin">
             </div>
             <!-- End Search box -->
 
@@ -32,7 +32,7 @@
                     </tr>
                     <tr class="table-body">
                         <td class="body-row">
-                            <a class="choose-user">1 </a>
+                            <a class="choose-user js-update-admin">1 </a>
                         </td>
                         <td class="body-row">Phan Hai Dang</td>
                         <td class="body-row">dangph5@fe.edu.vn</td>
@@ -42,11 +42,11 @@
             <!-- End Table -->
 
             <!-- Start modal add admin -->
-            <div class="modal-add-admin-container">
-                <div class="modal-content">
+            <div class="modal-add-admin-container js-modal-add-admin">
+                <div class="modal-content js-modal-content-add-admin">
                     <div class="modal-head">
                         <h2 class="modal-label">Add New Account</h2>
-                        <a class="modal-close">X</a>
+                        <a class="modal-close js-modal-close-add-admin">X</a>
                     </div>
                     <form action="" class="modal-body">
                         <div class="modal-input">
@@ -66,11 +66,11 @@
             <!--End modal add admin  -->
 
             <!-- Start modal update and delete -->
-            <div class="modal-update-admin-container">
-                <div class="modal-content">
+            <div class="modal-update-admin-container js-modal-update-admin">
+                <div class="modal-content js-modal-content-update-admin">
                     <div class="modal-head">
                         <h2 class="modal-label">Update Account</h2>
-                        <a class="modal-close">X</a>
+                        <a class="modal-close js-modal-close-update-admin">X</a>
                     </div>
                     <form action="" class="modal-body">
                         <div class="modal-input">
@@ -81,7 +81,7 @@
                         </div>
                         <div class="modal-footer">
                             <div class="btn-footer">
-                                <input type="submit" class="btn-update" value="Add">
+                                <input type="submit" class="btn-update" value="Update">
                             </div>
                             <div class="btn-footer">
                                 <input type="submit" class="btn-delete" value="Delete">
@@ -100,11 +100,55 @@
         </footer>
         <!-- End Footer -->
 
-        <!-- script -->
+        <!-- Start script -->
         <script>
+            //Modal add new admin
+            const Admins = document.querySelectorAll('.js-add-admin') //sellect the class used to use js
+            const modalcloseAdmin = document.querySelector('.js-modal-close-add-admin')
+            const ModalContentAdmin = document.querySelector('.js-modal-content-add-admin')
+            const modaladmin = document.querySelector('.js-modal-add-admin')
+                
+            function showModalAdd() {
+                modaladmin.classList.add('open')
+            }
 
+            for(const Admin of Admins ){
+                Admin.addEventListener('click',showModalAdd)
+            }
+
+            function hideModalAdd(){
+                modaladmin.classList.remove('open')
+            }
+            modalcloseAdmin.addEventListener('click',hideModalAdd)
+
+            ModalContentAdmin.addEventListener('click', function (event) {
+                event.stopPropagation() //stop nổi bọt
+            }) 
+
+            // Modal update
+            const Updates = document.querySelectorAll('.js-update-admin') //sellect the class used to use js
+            const modalclose = document.querySelector('.js-modal-close-update-admin')
+            const ModalContent = document.querySelector('.js-modal-content-update-admin')
+            const modal = document.querySelector('.js-modal-update-admin')
+            
+            function showModal() {
+                modal.classList.add('open')
+            }
+
+            for(const Update of Updates ){
+                Update.addEventListener('click',showModal)
+            }
+
+            function hideModal(){
+                modal.classList.remove('open')
+            }
+            modalclose.addEventListener('click',hideModal)
+
+            ModalContent.addEventListener('click', function (event) {
+                event.stopPropagation() //stop nổi bọt
+            })
         </script>
-
+        <!-- End script -->
     
 </body>
 </html>
