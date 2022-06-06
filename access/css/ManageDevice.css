@@ -1,93 +1,119 @@
-.Manager_Container {
+.Device-Container {
   padding: 5%;
 }
-.mm-title {
-  color: #777777;
-}
-.table-inside {
+.device-container {
   width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #2b3494;
+  margin-top: 15px;
 }
-.table-outside {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid white;
+.device-head {
+  background-color: #4169E1;
+  padding-left: 16px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-.head-row {
-  border: 3px solid white;
-}
-
-.table-head {
-  background-color: #6495ed;
-  margin-top: 30px;
+.dv-title {
+  font-size: 20px;
+  font-weight: bold;
   color: #fff;
 }
-.orange-line {
-  margin-top: 10px;
-  border: 2px solid #fbad4e;
+.btn-add-device{
+  height: 80%;
+  width:  30% ;
+  background-color: #32CD32;
   color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
 }
-.table-outside {
-  background-color: #4169e1;
-  margin-top: 30px;
-  color: #fff;
+.btn-add-device:hover {
+  background-color: #d3e669;
+  cursor: pointer;
+  color: #000;
+}
+.device-body {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0px 0px 8px 8px;
+}
+.btn-table {
+  height: 100%;
+  display: flex;
 }
 .btn-reload {
-  height: 25px;
-  width: 100%;
-  background-color: #ff0000;
+  height: 30px;
+  background-color: #32CD32;
+  border-radius: 4px;
+  width: 50%;
+  border: 1px solid #ccc;
   color: #fff;
-  border-radius: 5px;
-  border: none;
 }
-.btn-Enrollment {
-  width: 100%;
-  height: 25px;
-  background-color: #32cd32;
+.btn-reload:hover {
+  background-color: #2eff2e;
+  cursor: pointer;
+}
+.btn-attendence {
+  background-color: #32CD32;
+  border-radius: 4px;
+  width: 40%;
+  border: 1px solid #ccc;
   color: #fff;
-  border-radius: 5px;
-  border: none;
+  height: 30px;
+  margin-left: 6%;
 }
-.btn-Attendance {
-  width: 100%;
-  height: 25px;
-  background-color: #f0924e;
+.btn-enroll {
+  background-color: #F0924E;
+  border-radius: 4px;
+  width: 40%;
+  border: 1px solid #ccc;
   color: #fff;
-  border-radius: 5px;
-  border: none;
+  height: 30px;
+  margin-left: 6%;
 }
-.btn-Delete {
-  height: 25px;
+.btn-attendence:hover {
+  background-color: #2eff2e;
+  cursor: pointer;
+}
+.btn-enroll:hover {
+  background-color: #fccaa7;
+  cursor: pointer;
+}
+.btn-delete-device {
+  background-color: #FF0000;
+  border-radius: 4px;
   width: 100%;
-  background-color: #ff0000;
+  border: 1px solid #ccc;
   color: #fff;
-  border-radius: 5px;
-  border: none;
+  height: 30px;
+  margin-left: 6%;
 }
-.btn-NewDevice {
-  float: right;
-  height: 25px; 
-  margin-right: 15px;
-  font-size: large;
-  background-color: #32cd32;
-  color: #fff;
-  border-radius: 5px;
-  border: 2px solid;
+.btn-delete-device:hover {
+  background-color: #e60000;
+  cursor: pointer;
 }
-.flex-container {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 500px) {
+  .btn-reload {
+    height: 15px;
+    font-size: 5px;
+    width: 25px;
+  }
+  .btn-attendence {
+    height: 15px;
+    font-size: 5px;
+    width: 50%;
+  
+  }
+  .btn-delete-device {
+    height: 15px;
+    font-size: 5px;
+    width: 100;
+  }
+  .btn-add-device{
+    height: 25px;
+    width:  70px ;
+    font-size: 7px;
+  }
 }
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100%;
-  margin: 10px;
-  height: 25px; 
-  margin-right: 15px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-size: 30px;
-}
-
-
