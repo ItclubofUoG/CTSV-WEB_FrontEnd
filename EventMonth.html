@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/User.css">
 </head>
 <body>
@@ -12,6 +14,23 @@
         <h2 class="et-title">Monthly Events</h2>
         <div class="et-block">
 
+            <!-- Description detail popup information of the event -->
+            <div id="et-des-container">
+                <div id="et-des-block">
+                    <div class="et-des-head">
+                        <h3 class="et-des-title">Description</h3>
+                        <i class="fa-solid fa-xmark" id="et-close"></i>
+                    </div>
+                    <div class="et-des-body">
+                        <p class="et-des-info" style="text-align: justify;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore dolorum ducimus quos itaque rem nulla beatae. Dicta vero iusto aspernatur corrupti consequatur eum eligendi, non magni ratione aliquid quibusdam?
+                            Quibusdam labore architecto, quod corrupti, obcaecati neque tempora maxime reiciendis praesentium pariatur odio, veniam voluptas natus ipsam corporis expedita vero dolore repellat doloremque esse explicabo? Adipisci veniam sapiente maxime dolores.
+                            
+                            <!-- Event description by GET id from link data -->
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <!-- The Backend need to using a variable to count the numerical order: example: n=1-->
 
@@ -27,7 +46,10 @@
                     <div class="et-detail">Title: </div>
                     <div class="et-detail">Time: </div>
                     <div class="et-detail">Location: </div>
-                    <div class="et-detail" style="margin-bottom: 30px;">Description: </div>
+                    <div class="et-detail">Description: </div>
+
+                    <!-- The Button GET $id on the link href to show description in the popup description of each event -->
+                    <a class="et-more-info" href="#" >Show more</a>
                     <div class="et-detail">Score: </div>
                 </div>
             </div>
@@ -40,33 +62,16 @@
                     <div class="et-detail">Title: </div>
                     <div class="et-detail">Time: </div>
                     <div class="et-detail">Location: </div>
-                    <div class="et-detail" style="margin-bottom: 30px;">Description: </div>
+                    <div class="et-detail">Description: </div>
+
+                    <!-- The Button GET $id on the link href to show description in the popup description of each event -->
+                    <a class="et-more-info" href="#">Show more</a>
                     <div class="et-detail">Score: </div>
                 </div>
             </div>
 
-            <div class="et-piece">
-                <img src="/assets/img/OIP (2).jpg" alt="450x300" class="et-figure p1">
-                <div class="et-piece-info p2">
-                    <div class="et-detail">Title: </div>
-                    <div class="et-detail">Time: </div>
-                    <div class="et-detail">Location: </div>
-                    <div class="et-detail" style="margin-bottom: 30px;">Description: </div>
-                    <div class="et-detail">Score: </div>
-                </div>
-            </div>
-
-            <div class="et-piece">
-                <img src="/assets/img/OIP (1).jpg" alt="450x300" class="et-figure p3">
-                <div class="et-piece-info p4">
-                    <div class="et-detail">Title: </div>
-                    <div class="et-detail">Time: </div>
-                    <div class="et-detail">Location: </div>
-                    <div class="et-detail" style="margin-bottom: 30px;">Description: </div>
-                    <div class="et-detail">Score: </div>
-                </div>
-            </div>
         </div>
     </div>
 </body>
+<script src="/assets/js/moreInfo.js"></script>
 </html>
