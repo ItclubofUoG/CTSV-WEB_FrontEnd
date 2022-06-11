@@ -4,10 +4,12 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 } */
 
-body{
-    background-image: url(/access/img/bg.login.jpg);
+.login-wrapper{
+    background-image: url(/Front-End-PDPwebsite-main/assets/img/bg.login.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .login-form{
@@ -16,10 +18,10 @@ body{
     height: 300px;
     align-items: center;
     border-radius: 20px;
-    margin-top: calc(23% - 150px);
+    /* margin-top: calc(23% - 150px); */
     margin-left: calc(48% - 300px);
     display: block;
-    padding: 30px 0px 30px 0px;
+    padding: 3px 0px 30px 0px;
     opacity: 0.95;
 }
 .login-title{
@@ -35,6 +37,8 @@ body{
     padding: 15px;
     margin-left: 70px;
     margin-right: 70px;
+    position: relative;
+    height: 40px;
     
 }
 .login-input{
@@ -44,8 +48,19 @@ body{
     outline: none;
     width: 100%;
     height: 30px;
-    margin: 15px 0px 15px 0px;
+    /* margin: 15px 0px 15px 0px; */
     padding: 0px 15px 0px 15px;
+ 
+}
+.alert {
+    position: absolute;
+    min-width: 0px;
+    height: 23px;
+    background-color: #fff ;
+    bottom: 0;
+    left: 0;
+    padding: 0px 20px;
+    color: aqua;
 }
 .login-btn{
     width: 250px;
@@ -65,26 +80,8 @@ body{
     transition: 0.3s;
 }
 @media screen and (max-width: 900px){
-    /* *{
-        margin: 0px;
-        padding: 0px;
-    } */
-    /* html{
-        width: fit-content;
-    } */
-    /* body{
-        background-size: auto;
-        background-repeat: no-repeat;
-    } */
+
     .login-form{
-        /* background-color:#fff; 
-        width: 50%;
-        height: 250px;
-        align-items: center;
-        border-radius: 20px;
-        margin-top: calc(23% - 25%);
-        margin-left: calc(48% - 125px);
-        display: block;*/
         padding: 30px 0px 30px 0px; 
         margin: 10px;
         margin-left: calc(50% - 150px);
@@ -100,9 +97,6 @@ body{
         width: 200px;
     }
     .login-item{
-        /* width: fit-content;
-        padding-left: -100px;
-        padding-right: 5px; */
         padding: 15px;
         margin-left: 10px;
         margin-right: 10px;
@@ -110,16 +104,17 @@ body{
     .login-input{
         width: 200px;
     }
+    
 }
-/* @media screen and (max-width: 500px){
+ /* @media screen and (max-width: 500px){
     .login-form{
         background-color:#fff; 
         width: 70%;
         height: 250px;
         align-items: center;
         border-radius: 20px;
-        margin-top: calc(23% - 25%);
-        margin-left: calc(48% - 125px);
+        margin-top: calc(23% - 20%);
+        margin-left: calc(48% - 155px);
         display: block;
         padding: 30px 0px 30px 0px;
     }
@@ -128,4 +123,4 @@ body{
         margin-bottom: 10px;
         margin-top: 10px; 
     }
-} */
+}   */
